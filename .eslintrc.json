@@ -1,0 +1,9 @@
+{
+    "extends": [ "airbnb"],
+    "rules": {
+        "no-path-concat":"off",
+        "no-var":"off",
+        "prefer-template":"off",
+        "no-console":"off"
+    }
+}
