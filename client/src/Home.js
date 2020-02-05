@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Maps from "./Map"
+
 
 
 class Home extends Component {
@@ -13,6 +15,7 @@ class Home extends Component {
             My List
         </button>
       </Link>
+      <Maps/>
     </div>
     );
   }
