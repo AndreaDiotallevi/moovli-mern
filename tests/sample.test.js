@@ -1,5 +1,5 @@
 const request = require('supertest')
-const app = require('../index')
+const app = require('../server')
 
 describe('Get list', () => {
   it('should get the list', async (done) => {
