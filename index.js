@@ -3,6 +3,18 @@ const path = require('path');
 
 const app = express();
 
+const MongoClient = require('mongodb').MongoClient
+const uri = "mongodb+srv://moovli:moovli@moovli-qjsyq.mongodb.net/test?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+client.connect(err => {
+  if (err) return console.log(err)
+  db = client.db('moovli')
+  app.listen(5000, () => {
+    console.log('listening on 5000')
+  })
+})
+
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -14,11 +26,6 @@ app.get('/api/getList', (req, res) => {
 });
 
 // Handles any requests that don't match the ones above
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build/index.html'));
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
-
-const port = process.env.PORT || 5000;
-app.listen(port);
-
-console.log(`App is listening on port ${port}`);
