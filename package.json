@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mongodb": "^3.5.2"
+    "mongodb": "^3.5.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
@@ -20,7 +20,7 @@
     "babel-preset-env": "^1.7.0",
     "jest": "^24.9.0",
     "superagent": "^5.2.1",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-react": "^1.1.7",
