@@ -10,6 +10,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.get('/api/getList', (req,res) => {
     var list = ["item1", "item2", "item3"];
     res.json(list);
+    console.log(res.json(list))
     console.log('Sent list of items');
 });
 
@@ -18,7 +19,13 @@ app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
+app.get('/test', async (req, res) => {
+    res.status(200).json({message: 'pass!'})
+  })
+
 const port = process.env.PORT || 5000;
 app.listen(port);
 
 console.log('App is listening on port ' + port);
+
+module.exports = app
