@@ -1,2 +1,2 @@
-const app = require('./index.js')
+const app = require('./server.js')
 app.listen(3000)
