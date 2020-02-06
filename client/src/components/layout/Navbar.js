@@ -14,8 +14,7 @@ class Navbar extends Component {
               }}
               className="col s5 brand-logo center black-text"
             >
-              <i className="material-icons">code</i>
-              MERN
+              MOOVLI
             </Link>
           </div>
         </nav>
@@ -23,4 +22,5 @@ class Navbar extends Component {
     );
   }
 }
+
 export default Navbar;
