@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import  MapContainer from './mapContainer.js';
-
+import  MapContainer from './components/dashboard/mapContainer.js';
 
 class Home extends Component {
   render() {
